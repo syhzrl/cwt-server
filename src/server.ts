@@ -72,4 +72,4 @@ const startServer = () => {
     });
 }
 
-module.exports = router;
+module.exports = startServer;
