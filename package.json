@@ -5,7 +5,7 @@
   "main": "src/server.ts",
   "scripts": {
     "start": "nodemon",
-    "build": "vc --cwd build",
+    "build": "rm -rf build/&& tsc",
     "start:build": "node build/server.js"
   },
   "author": "",
