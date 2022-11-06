@@ -11,7 +11,7 @@ import cardRoutes from './routes/Card';
 const router = express();
 
 // Connect to Mongo
-const connectToDb = () => mongoose.connect(config.mongo.url, { retryWrites: true, w: 'majority' })
+mongoose.connect(config.mongo.url, { retryWrites: true, w: 'majority' })
     .then(() => {
         Logging.info('Connected to mongoDB');
         startServer();
@@ -71,8 +71,6 @@ const startServer = () => {
         Logging.info(`Server is running on port ${config.server.port}.`);
     });
 }
-
-export = connectToDb();
 
 // export = router;
 

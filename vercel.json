@@ -1,8 +1,11 @@
 {
     "version": 2,
+    "installCommand": "yarn",
+    "buildCommand": "npm build",
+    "outputDirectory": "build",
     "builds": [
         {
-            "src": "src/index.ts",
+            "src": "build/index.js",
             "use": "@vercel/node"
         }
     ],
@@ -17,7 +20,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/src/index.ts"
+            "dest": "build/index.js"
         }
     ]
 }
