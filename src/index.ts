@@ -71,13 +71,3 @@ const startServer = () => {
         Logging.info(`Server is running on port ${config.server.port}.`);
     });
 }
-
-// export = router;
-
-// const app = express();
-
-// app.get('/ping', (req, res, next) => {
-//     res.status(200).json({ message: 'pong' });
-// });
-
-// app.listen(9090, () => console.log('it works'));
