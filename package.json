@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/server.ts",
+  "type": "module",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "nodemon",
     "build": "rm -rf build/&& tsc",
