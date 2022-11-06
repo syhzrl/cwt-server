@@ -11,7 +11,7 @@ import cardRoutes from './routes/Card';
 const router = express();
 
 // Connect to Mongo
-mongoose.connect(config.mongo.url, { retryWrites: true, w: 'majority' })
+const connectMongoose = () => mongoose.connect(config.mongo.url, { retryWrites: true, w: 'majority' })
     .then(() => {
         Logging.info('Connected to mongoDB');
         startServer();
@@ -72,4 +72,4 @@ const startServer = () => {
     });
 }
 
-module.exports = startServer;
+module.exports = connectMongoose;
