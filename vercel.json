@@ -1,8 +1,5 @@
 {
     "version": 2,
-    "installCommand": "yarn",
-    "buildCommand": "npm build",
-    "outputDirectory": "build",
     "builds": [
         {
             "src": "src/index.ts",
