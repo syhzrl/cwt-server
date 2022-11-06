@@ -72,7 +72,7 @@ const startServer = () => {
     });
 }
 
-// export = router;
+export = router;
 
 // const app = express();
 
