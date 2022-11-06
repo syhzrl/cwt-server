@@ -2,11 +2,11 @@
   "name": "express-mongo-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.ts",
+  "main": "src/index.ts",
   "scripts": {
-    "start": "nodemon",
+    "start": "nodemon src/index.ts",
     "build": "rm -rf build/&& tsc",
-    "start:build": "node build/server.js"
+    "start:build": "node build/index.js"
   },
   "author": "",
   "license": "ISC",
