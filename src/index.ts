@@ -10,18 +10,6 @@ import cardRoutes from './routes/Card';
 
 const router = express();
 
-// Connect to Mongo
-mongoose.connect(config.mongo.url, { retryWrites: true, w: 'majority' })
-    .then(() => {
-        Logging.info('Connected to mongoDB');
-        startServer();
-    })
-    .catch((error) => {
-        Logging.error('Unable to connect: ');
-        Logging.error(error);
-    });
-
-
 // Only start server if Mongo Connect
 const startServer = () => {
     router.use((req, res, next) => {
@@ -72,8 +60,6 @@ const startServer = () => {
     });
 }
 
-export = router;
-
 // const app = express();
 
 // app.get('/ping', (req, res, next) => {
@@ -81,3 +67,15 @@ export = router;
 // });
 
 // app.listen(9090, () => console.log('it works'));
+
+// Connect to Mongo
+mongoose.connect(config.mongo.url, { retryWrites: true, w: 'majority' })
+    .then(() => {
+        Logging.info('Connected to mongoDB');
+        startServer();
+    })
+    .catch((error) => {
+        Logging.error('Unable to connect: ');
+        Logging.error(error);
+    });
+
